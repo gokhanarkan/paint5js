@@ -1,0 +1,151 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+    font-family: "Calibri";
+}
+
+button{
+    background-color: white;
+    border: 1px solid #000;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 5px;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+} 
+
+.sidebar{
+	grid-area: sidebar;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#content{
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+    background-color: #375AA2;
+    padding: 6px;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.sideBarItem{
+	height: 40px;
+	width: 40px;
+	margin-left: 4px;
+	margin-top: 5px;
+	margin-bottom: 6px;
+    padding: 3px;
+    outline-offset: none;
+    cursor: pointer;
+}
+
+.sideBarItem img{
+	height: 40px;
+	Width:40px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+	.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 70px 230px  minmax(500px, 1fr);
+		grid-template-rows: 35px minmax(500px, 1fr) 160px;
+		grid-template-areas:
+               "header header header"
+				"sidebar content content"
+                "colourP colourP options";
+		background-color: #fff;
+		color: #444;
+	}
+
+.box {
+  background-color: #375AA2;
+  color: #fff;
+  font-size: 150%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 10%;
+    height: 8px;
+    border-radius: 5px;   
+    background: #d4ebfd;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #d20055;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #d20055;
+    cursor: pointer;
+}
+
+.sizeInput{
+    width: 30px;
+}
+
+input[type=number]{
+    width: 50px;
+}
+
+.optImage{
+    width: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.optImage:nth-child(3){
+    margin-right: 100px;
+}
+
+.optionCont{
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.optionButtonClass{
+    padding: 5px 10px;
+}
